@@ -29,7 +29,7 @@ class MyPipeline(object):
     #pipeline默认调用
     def process_item(self, item, spider):
         try:
-            self.cursor.execute("insert into mooc(title, student, catycray, degree, hour,score,introduction,url) values(%s, %s, %s, %s, %s, %s, %s, %s)", (item['title'], item['student'], item['catycray'], ['degree'], item['hour'], item['score'], item['introduction'], item['url']))
+            self.cursor.execute("insert into mooc(title, student, catycray, degree, hour,score,introduction,url) values(%s, %s, %s, %s, %s, %s, %s, %s)", (item['title'], item['student'], item['catycray'], item['degree'], item['hour'], item['score'], item['introduction'], item['url']))
             # self.cursor.execute(
             #     "insert into mooc(title, student,introduction,url) values(%s, %s, %s, %s)",
             #     (item['title'], item['student'], item['introduction'],
